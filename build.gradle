@@ -1,0 +1,36 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.8.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+		maven {
+			url "https://plugins.gradle.org/m2/"
+		}
+	}
+
+
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+group = 'com.hylamobile.poc'
+version = '1.0.0'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+jar {
+	baseName 'water-calc'
+}
+
+
+dependencies {
+	testCompile('org.junit.jupiter:junit-jupiter-api:5.0.2')
+	testRuntime('org.junit.jupiter:junit-jupiter-engine:5.0.2')
+
+}
+
